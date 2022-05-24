@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom properties</title>
+    <style>
+        :root {
+            --background-color: thistle;
+            --text-color: whitesmoke;
+            --base-space: 8px;
+        }
+
+        .first-list {
+            background-color: var(--background-color);
+            color: whitesmoke;
+            margin-left: var(--base-space);
+        }
+
+        .second-list {
+            background-color: var(--background-color);
+            color: whitesmoke;
+            margin-left: calc(var(--base-space) * 2); /*calc -> 계산할 수 있는 함수*/
+        }
+    </style>
+</head>
+<body>
+    <ul class="first-list">
+        <li>Orange</li>
+        <li>Apple</li>
+    </ul>
+    <ul class="second-list">
+        <li>Korea</li>
+        <li>U.S</li>
+        <li>Japan</li>
+    </ul>
+</body>
+</html>
